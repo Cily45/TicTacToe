@@ -11,6 +11,7 @@ int main(void) {
     char grid[3][3];
     initGrid(grid);
     while (true) {
+        system("clear");
         int posPlayer = 0;
         printGrid(grid);
         printf("Veuiller choisir une case où jouer: ");
@@ -28,7 +29,6 @@ int main(void) {
                 printf("Félicitation, vous avez gagnez!");
                 break;
             }
-            printGrid(grid);
             if (grid[1][1] == ' ') {
                 setPos('O', 4, grid);
             } else {
@@ -54,7 +54,6 @@ int main(void) {
                 break;
             }
         }
-        system("clear");
     }
 
     return 0;
